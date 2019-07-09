@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB331906EA4BF11075F02B7 /* Pods_Emstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DA11FE31E043E4676DBE0D /* Pods_Emstagram.framework */; };
+		1B23157B42E223324CF2C412 /* Pods_EmstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3ACF925B9984BE84E61D9F /* Pods_EmstagramUITests.framework */; };
+		B1C0383122D412570008C120 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C0383022D412570008C120 /* LoginViewController.m */; };
+		B1C0383522D413690008C120 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C0383422D413690008C120 /* RegisterViewController.m */; };
+		B1DAE75E22D521E60056C857 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DAE75D22D521E60056C857 /* HomeFeedViewController.m */; };
 		B1FC7A6622D4004E00A3B7FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */; };
-		B1FC7A6922D4004E00A3B7FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A6822D4004E00A3B7FE /* ViewController.m */; };
 		B1FC7A6C22D4004E00A3B7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6A22D4004E00A3B7FE /* Main.storyboard */; };
 		B1FC7A6E22D4004F00A3B7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6D22D4004F00A3B7FE /* Assets.xcassets */; };
 		B1FC7A7122D4004F00A3B7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6F22D4004F00A3B7FE /* LaunchScreen.storyboard */; };
 		B1FC7A7422D4004F00A3B7FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A7322D4004F00A3B7FE /* main.m */; };
 		B1FC7A7E22D4004F00A3B7FE /* EmstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A7D22D4004F00A3B7FE /* EmstagramTests.m */; };
 		B1FC7A8922D4004F00A3B7FE /* EmstagramUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A8822D4004F00A3B7FE /* EmstagramUITests.m */; };
+		E4BC001DAA63EE9751170F22 /* Pods_EmstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012F03BC47A7E55E87260D72 /* Pods_EmstagramTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +40,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00DA11FE31E043E4676DBE0D /* Pods_Emstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		012F03BC47A7E55E87260D72 /* Pods_EmstagramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmstagramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05FB78FEC0007AB455D582FB /* Pods-Emstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emstagram.debug.xcconfig"; path = "Target Support Files/Pods-Emstagram/Pods-Emstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		146A8A17B170EA98FB68A14B /* Pods-EmstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmstagramTests.debug.xcconfig"; path = "Target Support Files/Pods-EmstagramTests/Pods-EmstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C3ACF925B9984BE84E61D9F /* Pods_EmstagramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmstagramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0DD47FB737A8907EA3C259 /* Pods-EmstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmstagramTests.release.xcconfig"; path = "Target Support Files/Pods-EmstagramTests/Pods-EmstagramTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4ABE1A6CC616C767C1BBB20 /* Pods-EmstagramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmstagramUITests.debug.xcconfig"; path = "Target Support Files/Pods-EmstagramUITests/Pods-EmstagramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD87D9713386287F136D8EDC /* Pods-Emstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emstagram.release.xcconfig"; path = "Target Support Files/Pods-Emstagram/Pods-Emstagram.release.xcconfig"; sourceTree = "<group>"; };
+		B1C0382F22D412570008C120 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B1C0383022D412570008C120 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B1C0383322D413690008C120 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		B1C0383422D413690008C120 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B1DAE75C22D521E60056C857 /* HomeFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
+		B1DAE75D22D521E60056C857 /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		B1FC7A6122D4004E00A3B7FE /* Emstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B1FC7A6722D4004E00A3B7FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B1FC7A6822D4004E00A3B7FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B1FC7A6B22D4004E00A3B7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1FC7A6D22D4004F00A3B7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1FC7A7022D4004F00A3B7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 		B1FC7A8422D4004F00A3B7FE /* EmstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FC7A8822D4004F00A3B7FE /* EmstagramUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmstagramUITests.m; sourceTree = "<group>"; };
 		B1FC7A8A22D4004F00A3B7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FFB72F8CB278F1E230FCFE /* Pods-EmstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-EmstagramUITests/Pods-EmstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB331906EA4BF11075F02B7 /* Pods_Emstagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4BC001DAA63EE9751170F22 /* Pods_EmstagramTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +92,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B23157B42E223324CF2C412 /* Pods_EmstagramUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35818C3CB78341B12123C29C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00DA11FE31E043E4676DBE0D /* Pods_Emstagram.framework */,
+				012F03BC47A7E55E87260D72 /* Pods_EmstagramTests.framework */,
+				1C3ACF925B9984BE84E61D9F /* Pods_EmstagramUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		374A7AD21AFFF3C8B59B489B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05FB78FEC0007AB455D582FB /* Pods-Emstagram.debug.xcconfig */,
+				AD87D9713386287F136D8EDC /* Pods-Emstagram.release.xcconfig */,
+				146A8A17B170EA98FB68A14B /* Pods-EmstagramTests.debug.xcconfig */,
+				3C0DD47FB737A8907EA3C259 /* Pods-EmstagramTests.release.xcconfig */,
+				A4ABE1A6CC616C767C1BBB20 /* Pods-EmstagramUITests.debug.xcconfig */,
+				E0FFB72F8CB278F1E230FCFE /* Pods-EmstagramUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B1C0383222D4125E0008C120 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0382F22D412570008C120 /* LoginViewController.h */,
+				B1C0383022D412570008C120 /* LoginViewController.m */,
+				B1C0383322D413690008C120 /* RegisterViewController.h */,
+				B1C0383422D413690008C120 /* RegisterViewController.m */,
+				B1DAE75C22D521E60056C857 /* HomeFeedViewController.h */,
+				B1DAE75D22D521E60056C857 /* HomeFeedViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B1FC7A5822D4004E00A3B7FE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +142,8 @@
 				B1FC7A7C22D4004F00A3B7FE /* EmstagramTests */,
 				B1FC7A8722D4004F00A3B7FE /* EmstagramUITests */,
 				B1FC7A6222D4004E00A3B7FE /* Products */,
+				374A7AD21AFFF3C8B59B489B /* Pods */,
+				35818C3CB78341B12123C29C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +160,9 @@
 		B1FC7A6322D4004E00A3B7FE /* Emstagram */ = {
 			isa = PBXGroup;
 			children = (
+				B1C0383222D4125E0008C120 /* View Controllers */,
 				B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */,
 				B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */,
-				B1FC7A6722D4004E00A3B7FE /* ViewController.h */,
-				B1FC7A6822D4004E00A3B7FE /* ViewController.m */,
 				B1FC7A6A22D4004E00A3B7FE /* Main.storyboard */,
 				B1FC7A6D22D4004F00A3B7FE /* Assets.xcassets */,
 				B1FC7A6F22D4004F00A3B7FE /* LaunchScreen.storyboard */,
@@ -139,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FC7A8D22D4004F00A3B7FE /* Build configuration list for PBXNativeTarget "Emstagram" */;
 			buildPhases = (
+				04737E3B1E48493AB699D625 /* [CP] Check Pods Manifest.lock */,
 				B1FC7A5D22D4004E00A3B7FE /* Sources */,
 				B1FC7A5E22D4004E00A3B7FE /* Frameworks */,
 				B1FC7A5F22D4004E00A3B7FE /* Resources */,
+				8B7CA9BA1E501F88632509D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FC7A9022D4004F00A3B7FE /* Build configuration list for PBXNativeTarget "EmstagramTests" */;
 			buildPhases = (
+				4BB46F6555924E9BD167340D /* [CP] Check Pods Manifest.lock */,
 				B1FC7A7522D4004F00A3B7FE /* Sources */,
 				B1FC7A7622D4004F00A3B7FE /* Frameworks */,
 				B1FC7A7722D4004F00A3B7FE /* Resources */,
@@ -174,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1FC7A9322D4004F00A3B7FE /* Build configuration list for PBXNativeTarget "EmstagramUITests" */;
 			buildPhases = (
+				8D7256C249D2AF3C1B2AB2BF /* [CP] Check Pods Manifest.lock */,
 				B1FC7A8022D4004F00A3B7FE /* Sources */,
 				B1FC7A8122D4004F00A3B7FE /* Frameworks */,
 				B1FC7A8222D4004F00A3B7FE /* Resources */,
@@ -257,12 +319,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04737E3B1E48493AB699D625 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Emstagram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BB46F6555924E9BD167340D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmstagramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B7CA9BA1E501F88632509D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emstagram/Pods-Emstagram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Emstagram/Pods-Emstagram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Emstagram/Pods-Emstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D7256C249D2AF3C1B2AB2BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmstagramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1FC7A5D22D4004E00A3B7FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1FC7A6922D4004E00A3B7FE /* ViewController.m in Sources */,
+				B1DAE75E22D521E60056C857 /* HomeFeedViewController.m in Sources */,
+				B1C0383522D413690008C120 /* RegisterViewController.m in Sources */,
+				B1C0383122D412570008C120 /* LoginViewController.m in Sources */,
 				B1FC7A7422D4004F00A3B7FE /* main.m in Sources */,
 				B1FC7A6622D4004E00A3B7FE /* AppDelegate.m in Sources */,
 			);
@@ -433,6 +583,7 @@
 		};
 		B1FC7A8E22D4004F00A3B7FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05FB78FEC0007AB455D582FB /* Pods-Emstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +600,7 @@
 		};
 		B1FC7A8F22D4004F00A3B7FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD87D9713386287F136D8EDC /* Pods-Emstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -465,6 +617,7 @@
 		};
 		B1FC7A9122D4004F00A3B7FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 146A8A17B170EA98FB68A14B /* Pods-EmstagramTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -483,6 +636,7 @@
 		};
 		B1FC7A9222D4004F00A3B7FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0DD47FB737A8907EA3C259 /* Pods-EmstagramTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +655,7 @@
 		};
 		B1FC7A9422D4004F00A3B7FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4ABE1A6CC616C767C1BBB20 /* Pods-EmstagramUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EmstagramUITests/Info.plist;
@@ -518,6 +673,7 @@
 		};
 		B1FC7A9522D4004F00A3B7FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0FFB72F8CB278F1E230FCFE /* Pods-EmstagramUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EmstagramUITests/Info.plist;

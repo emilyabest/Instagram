@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Parse/Parse.h"
 
 @interface AppDelegate ()
 
@@ -14,11 +15,43 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // Initializes Parse
+    ParseClientConfiguration *config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"appid";
+        configuration.server = @"https://instagram-recreate.herokuapp.com/parse"; // SUPPOSED TO BE HTTP, BUT ERROR MESSAGE PRINTS WITHOUT S
+    }];
+    
+    [Parse initializeWithConfiguration:config];
+    
+    // Test
+//    PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
+//    gameScore[@"score"] = @1337;
+//    gameScore[@"playerName"] = @"lol Plott";
+//    gameScore[@"cheatMode"] = @NO;
+//    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"Object saved!");
+//        } else {
+//            NSLog(@"🛑 Error: %@", error.description);
+//        }
+//    }];
+    
+//    // Checks if a cached user is already logged in. If so, the app directly loads the Home view controller without asking the user to login again.
+//    if (PFUser.currentUser) {
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//
+//        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"AuthenticatedViewController"];
+//    }
+    
     return YES;
 }
+
+/**
+ Checks if a cached user is already logged in. If so, the app directly loads the Home view controller without asking the user to login again.
+ */
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -12,9 +12,10 @@
 #import "HomeFeedViewController.h"
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
+#import "Post.h"
 
 @interface HomeFeedViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (strong, nonatomic) UIImage *chosenImage;
+@property (strong, nonatomic) Post *post;
 
 @end
 
@@ -62,15 +63,18 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary<NSString *,id> *)info {
     
     // Get the image captured by the UIImagePickerController
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+//    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     
     // Do something with the images (based on your use case)
-    self.chosenImage = editedImage;
+    // Calling the method implemented in the delegate VC. Boss (HomeFeedVC) calls the delegate (ComposeVC) with the protocol it knows the delegate has implemented.
+//    self.chosenImage = editedImage;
+//    self.post.image = editedImage;
+    [self.delegate receiveImage:editedImage];
     
     // Dismiss UIImagePickerController to go back to your original view controller
     [self dismissViewControllerAnimated:YES completion:nil];
-//    [self performSegueWithIdentifier:@"firstSegue" sender:nil];
+    [self performSegueWithIdentifier:@"composeSegue" sender:nil];
 }
 
 /*

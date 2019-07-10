@@ -10,11 +10,9 @@
 #import "HomeFeedViewController.h"
 #import "Post.h"
 
-@interface ComposeViewController () <CanReceiveImageDelegate> // ComposeVC conforms to receive image
+@interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *composeImage;
 @property (weak, nonatomic) IBOutlet UITextView *composeCaption;
-//@property (strong, nonatomic) HomeFeedViewController *homeVC;
-//@property (strong, nonatomic) Post *post;
 
 @end
 
@@ -22,27 +20,77 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.composeImage.image = [self resizeImage:self.homeVC.chosenImage withSize: CGSizeMake(100, 100)];
-//    self.composeImage.image = self.homeVC.chosenImage;
-//    self.composeImage.image = self.post.image;
+    
+    // Instatiate the gesture recognizer
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
+    [self.composeImage addGestureRecognizer:tapGestureRecognizer];
+    self.composeImage.userInteractionEnabled = YES;
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    tapGestureRecognizer.delegate = self;
 }
 
 /**
- Resizing a UIImage
+ Tap gesture method
  */
-- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
-    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
-    
-    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
-    resizeImageView.image = image;
-    
-    UIGraphicsBeginImageContext(size);
-    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
+- (void) handleTapFrom: (UITapGestureRecognizer *)recognizer {
+    // Initialize camera/camera roll view
+    [self initializeCamera];
 }
+
+
+/**
+ Opens a camera/camera roll
+ */
+- (void)initializeCamera {
+    // Instantiate a UIImagePickerController
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    
+    // Check if camera is supported
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        NSLog(@"Camera 🚫 available so we will use photo library instead");
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    // Present UIImagePickerController
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+/**
+ The delegate method for UIImagePickerControllerDelegate
+ */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo: (NSDictionary<NSString *,id> *)info {
+    
+    // Get the image captured by the UIImagePickerController
+    //    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    
+    // Do something with the images (based on your use case)
+    self.composeImage.image = editedImage;
+    
+    // Dismiss UIImagePickerController to go back to ComposeVC
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+///**
+// Resizing a UIImage
+// */
+//- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+//    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+//
+//    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+//    resizeImageView.image = image;
+//
+//    UIGraphicsBeginImageContext(size);
+//    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//
+//    return newImage;
+//}
 
 /**
  Close compose screen when cancel button is tapped.
@@ -62,26 +110,6 @@
     
     // Close the compose screen
     [self dismissViewControllerAnimated:TRUE completion:nil];
-}
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
-    HomeFeedViewController *homeVC = [segue destinationViewController];
-    
-    //set ourselves as a delegate
-    homeVC.delegate = self;
-}
-
-
-- (void)receiveImage:(nonnull UIImage *)image {
-    [self resizeImage:image withSize:CGSizeMake(400, 400)];
-    self.composeImage.image = image;
 }
 
 @end

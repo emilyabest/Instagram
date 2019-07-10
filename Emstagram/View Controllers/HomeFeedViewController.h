@@ -10,18 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol CanReceiveImageDelegate <NSObject>
-
-// Contract method
-- (void)receiveImage:(UIImage *) image;
-
-@end
-
 @interface HomeFeedViewController : UIViewController
-//@property (strong, nonatomic) UIImage *chosenImage;
-
-// Property of boss. Delegate can be of any type and receives protocol
-@property (nonatomic, weak) id <CanReceiveImageDelegate> delegate;
 
 @end
 

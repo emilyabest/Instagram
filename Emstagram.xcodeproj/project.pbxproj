@@ -12,6 +12,7 @@
 		B1C0383122D412570008C120 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C0383022D412570008C120 /* LoginViewController.m */; };
 		B1C0383522D413690008C120 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C0383422D413690008C120 /* RegisterViewController.m */; };
 		B1DAE75E22D521E60056C857 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DAE75D22D521E60056C857 /* HomeFeedViewController.m */; };
+		B1DAE76222D567080056C857 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DAE76122D567080056C857 /* Post.m */; };
 		B1FC7A6622D4004E00A3B7FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */; };
 		B1FC7A6C22D4004E00A3B7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6A22D4004E00A3B7FE /* Main.storyboard */; };
 		B1FC7A6E22D4004F00A3B7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6D22D4004F00A3B7FE /* Assets.xcassets */; };
@@ -54,6 +55,8 @@
 		B1C0383422D413690008C120 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		B1DAE75C22D521E60056C857 /* HomeFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
 		B1DAE75D22D521E60056C857 /* HomeFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
+		B1DAE76022D567080056C857 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		B1DAE76122D567080056C857 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		B1FC7A6122D4004E00A3B7FE /* Emstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +138,15 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		B1DAE75F22D566C40056C857 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1DAE76022D567080056C857 /* Post.h */,
+				B1DAE76122D567080056C857 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B1FC7A5822D4004E00A3B7FE = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 		B1FC7A6322D4004E00A3B7FE /* Emstagram */ = {
 			isa = PBXGroup;
 			children = (
+				B1DAE75F22D566C40056C857 /* Models */,
 				B1C0383222D4125E0008C120 /* View Controllers */,
 				B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */,
 				B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */,
@@ -411,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1DAE75E22D521E60056C857 /* HomeFeedViewController.m in Sources */,
+				B1DAE76222D567080056C857 /* Post.m in Sources */,
 				B1C0383522D413690008C120 /* RegisterViewController.m in Sources */,
 				B1C0383122D412570008C120 /* LoginViewController.m in Sources */,
 				B1FC7A7422D4004F00A3B7FE /* main.m in Sources */,

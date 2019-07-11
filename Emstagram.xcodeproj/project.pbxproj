@@ -16,6 +16,7 @@
 		B1DAE76522D64EBA0056C857 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DAE76422D64EBA0056C857 /* ComposeViewController.m */; };
 		B1DAE76A22D69CD80056C857 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DAE76922D69CD80056C857 /* PostCell.m */; };
 		B1EE2E6C22D7AB59006BD8AD /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EE2E6B22D7AB59006BD8AD /* DetailsViewController.m */; };
+		B1F9F1EC22D7EDF2002944ED /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1F9F1EB22D7EDF2002944ED /* Billabong.ttf */; };
 		B1FC7A6622D4004E00A3B7FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */; };
 		B1FC7A6C22D4004E00A3B7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6A22D4004E00A3B7FE /* Main.storyboard */; };
 		B1FC7A6E22D4004F00A3B7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FC7A6D22D4004F00A3B7FE /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		B1DAE76922D69CD80056C857 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		B1EE2E6A22D7AB59006BD8AD /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		B1EE2E6B22D7AB59006BD8AD /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		B1F9F1EB22D7EDF2002944ED /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Billabong.ttf; path = ../../../Downloads/Billabong.ttf; sourceTree = "<group>"; };
 		B1FC7A6122D4004E00A3B7FE /* Emstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1FC7A6522D4004E00A3B7FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		B1FC7A6322D4004E00A3B7FE /* Emstagram */ = {
 			isa = PBXGroup;
 			children = (
+				B1F9F1EB22D7EDF2002944ED /* Billabong.ttf */,
 				B1DAE75F22D566C40056C857 /* Models */,
 				B1C0383222D4125E0008C120 /* View Controllers */,
 				B1FC7A6422D4004E00A3B7FE /* AppDelegate.h */,
@@ -328,6 +331,7 @@
 				B1FC7A7122D4004F00A3B7FE /* LaunchScreen.storyboard in Resources */,
 				B1FC7A6E22D4004F00A3B7FE /* Assets.xcassets in Resources */,
 				B1FC7A6C22D4004E00A3B7FE /* Main.storyboard in Resources */,
+				B1F9F1EC22D7EDF2002944ED /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

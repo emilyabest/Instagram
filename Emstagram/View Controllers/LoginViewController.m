@@ -17,15 +17,18 @@
 
 @implementation LoginViewController
 
+/**
+ Initial screen view
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 /**
- User tapped the login button
+ User tapped the login button; login the user and segue to HomeFeedVC.
  */
 - (IBAction)didTapLogin:(id)sender {
     [self loginUser];
+    [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
 }
 
 /**
@@ -40,9 +43,6 @@
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             NSLog(@"User logged in successfully");
-            
-            // display view controller that needs to be shown after successful login
-            [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
         }
     }];
 }

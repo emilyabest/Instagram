@@ -18,6 +18,9 @@
 
 @implementation DetailsViewController
 
+/**
+ Initial screen view.
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     

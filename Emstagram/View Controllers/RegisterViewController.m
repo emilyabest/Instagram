@@ -18,15 +18,26 @@
 
 @implementation RegisterViewController
 
+/**
+ Initial screen view
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 /**
- User tapped the sign up button
+ User tapped the sign up button; register the new user and dismiss the RegisterVC.
  */
 - (IBAction)didTapSignUp:(id)sender {
     [self registerUser];
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
+/**
+ User tapped the cancel button; dismiss the RegisterVC.
+ */
+- (IBAction)didTapCancel:(id)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 /**
@@ -47,9 +58,6 @@
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"User registered successfully");
-            
-            // manually segue to logged in view
-            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
         }
     }];
 }

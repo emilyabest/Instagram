@@ -9,6 +9,7 @@
 #import "ComposeViewController.h"
 #import "HomeFeedViewController.h"
 #import "Post.h"
+#import "AppDelegate.h"
 
 @interface ComposeViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *composeImage;
@@ -30,7 +31,7 @@
 }
 
 /**
- Tap gesture method
+ Tap gesture method for when user taps the image to choose the picture.
  */
 - (void) handleTapFrom: (UITapGestureRecognizer *)recognizer {
     // Initialize camera/camera roll view
@@ -103,13 +104,11 @@
  Share the composed post when the user taps share.
  */
 - (IBAction)didTapShare:(id)sender {
-    // call Post's + (void) postUserImage:(UIImage *)image withCaption:(NSString *)caption withCompletion:(PFBooleanResultBlock)completion {
+    // Save the post to the database.
     [Post postUserImage:self.composeImage.image withCaption:self.composeCaption.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         // calls code from the method's implementation in Post
+        [self dismissViewControllerAnimated:TRUE completion:nil];
     }];
-    
-    // Close the compose screen
-    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 @end

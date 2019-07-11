@@ -102,7 +102,10 @@
     Post *post = self.postsArray[indexPath.row];
     UIImage *image = [[UIImage alloc] initWithData:post.image.getData];
     cell.postCellImage.image = image;
-    cell.postCellCaption.text = post[@"caption"];
+//    cell.postCellCaption.text = post[@"caption"];
+    cell.commentCount.text = [NSString stringWithFormat:@"%d", post[@"commentCount"]];
+    cell.likeCount.text = [NSString stringWithFormat:@"%d", post[@"likeCount"]];
+    cell.userName.text = post[@"userID"];
     
     return cell;
 }

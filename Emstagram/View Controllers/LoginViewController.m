@@ -28,7 +28,7 @@
  */
 - (IBAction)didTapLogin:(id)sender {
     [self loginUser];
-    [self performSegueWithIdentifier:@"homeFeedSegue" sender:nil];
+//    [self performSegueWithIdentifier:@"tabBarSegue" sender:nil];
 }
 
 /**

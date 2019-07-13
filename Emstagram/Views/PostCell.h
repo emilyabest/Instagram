@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (weak, nonatomic) IBOutlet UILabel *commentCount;
 //@property (weak, nonatomic) IBOutlet UILabel *likeCount;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @end
 

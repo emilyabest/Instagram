@@ -6,9 +6,6 @@
 //  Copyright © 2019 emilyabest. All rights reserved.
 //
 
-//NSLog(@"☀️ Checkpoint 1");
-
-
 #import "HomeFeedViewController.h"
 #import <Parse/Parse.h>
 #import <UIKit/UIKit.h>
@@ -21,8 +18,6 @@
 
 @interface HomeFeedViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-//@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
-//@property (weak, nonatomic) IBOutlet UITextView *cellCaption;
 @property (strong, nonatomic) NSArray *postsArray;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -39,7 +34,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.rowHeight = 400; // TODO: DELETE WHEN AUTOLAYOUT APPLIED
+    self.tableView.rowHeight = 345; // TODO: DELETE WHEN AUTOLAYOUT APPLIED
     
     // reload the data and fill with posts
     [self.tableView reloadData];
@@ -153,6 +148,12 @@ Frequenting screen view
     cell.postCellImage.image = image;
     cell.userName.text = post.author.username;
     
+    // set the profile image
+    cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.width / 2;
+    PFFileObject *imageFile = post.profileImage;
+    UIImage *profilePic = [[UIImage alloc] initWithData:imageFile.getData];
+    cell.profileImage.image = profilePic;
+
     return cell;
 }
 
